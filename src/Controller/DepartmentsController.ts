@@ -3,15 +3,13 @@ import { prisma } from "../prisma/client";
 
 // import { PrismaClient } from "@prisma/client";
 // const prisma = new PrismaClient();
-
-interface DepartmentCreateData {name: string; }
+// interface DepartmentCreateData {name: string; }
 
 export default class DepartmentsController{
 
     public async create(req: Request, res: Response): Promise<Response> {
         
         // const { name } = req.body as DepartmentCreateData;
-
         // console.log(req.body);
         // console.log(name);
     

@@ -1,13 +1,13 @@
 /* ===== COMANDOS NO TERMINAL =====
 
+yarn install (Para instalar os pacotes)
+
+
 yarn prima init (Para gerar toda a estrutura necessária do projeto)
 
 yarn add prisma ts-node-dev typescript @types/express -D
 
 yarn prisma migrate dev (Para gerar as migrations do banco de dados) -> nome da migration: initial
-
-
-
 
 
 

@@ -1,4 +1,10 @@
 
+-- EXECUTAR AS QUERY's PARA CRIAR O BANCO DE DADOS E AS TABELAS
+
+CREATE DATABASE "db_JavaScript"
+
+USE "db_JavaScript";
+
 -- ====>>>>> Executar Query para criar a tabela de departamentos
 
 CREATE TABLE "department" (
