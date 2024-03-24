@@ -1,0 +1,22 @@
+{
+  "name": "JavaScrip-New",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate": "prisma generate",
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "prisma": "^5.11.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "@types/body-parser": "^1.19.5",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1"
+  }
+}
