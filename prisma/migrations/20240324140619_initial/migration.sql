@@ -3,7 +3,7 @@
 
 CREATE DATABASE "db_JavaScript"
 
-USE "db_JavaScript";
+-- USE "db_JavaScript";
 
 CREATE TABLE "department" (
     "id" SERIAL NOT NULL,
