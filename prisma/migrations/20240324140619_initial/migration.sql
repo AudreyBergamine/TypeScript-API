@@ -1,11 +1,9 @@
 
--- EXECUTAR AS QUERY's PARA CRIAR O BANCO DE DADOS E AS TABELAS
+-- ****** EXECUTAR AS QUERY's PARA CRIAR O BANCO DE DADOS E AS TABELAS *****
 
 CREATE DATABASE "db_JavaScript"
+-- USE "db_JavaScript";
 
-USE "db_JavaScript";
-
--- ====>>>>> Executar Query para criar a tabela de departamentos
 
 CREATE TABLE "department" (
     "id" SERIAL NOT NULL,
@@ -13,8 +11,6 @@ CREATE TABLE "department" (
 
     CONSTRAINT "department_pkey" PRIMARY KEY ("id")
 );
-
--- ====>>>>> Executar Query para criar os departamentos
 
 INSERT INTO department(name) VALUES 
     ('Departamento de TI'),
