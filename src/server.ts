@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// o use departments deve ir após o bodyparse
 app.use(departmentsRouter);
 
 app.listen(3333, () => {console.log("Conectado")})
