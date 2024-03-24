@@ -4,13 +4,11 @@ import bodyParser from "body-parser";
 
 const app = express();
 
-// Configurar o body-parser para analisar solicitações com 'x-www-form-urlencoded'
+// Configurando o bodyParser para analisar solicitações com 'x-www-form-urlencoded'
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// o use departments deve ir após o bodyparse
+// O use departments deve ir após o bodyParse
 app.use(departmentsRouter);
 
-app.listen(3333, () => {console.log("Conectado")})
-
-
+app.listen(3333, () => {console.log("Server is Running in port 3333: Conectado")})

@@ -12,11 +12,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-
+// Criando a Entidade com suas colunas (atributos)
 model Department {
-  id      Int      @id @default(autoincrement())
-  name String
- 
-  @@map("department") 
+  id Int @id @default(autoincrement())
+  name String 
+  @@map("department") // Para usar com letra minúscula
 }
 

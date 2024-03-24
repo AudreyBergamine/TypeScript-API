@@ -22,6 +22,7 @@ export default class DepartmentsController{
             const obj = await prisma.department.create({ data: { name } });
             return res.json(obj);
             console.log("Departamento criado com sucesso");
+            
         } catch (error) {
             console.error("Erro ao criar departamento:", error);
             return res.status(500).json({ error: "Erro ao criar departamento" });
