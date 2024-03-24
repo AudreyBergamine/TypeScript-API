@@ -1,37 +1,40 @@
 import { Response, Request } from "express";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "../prisma/client";
 
-const prisma = new PrismaClient();
+// import { PrismaClient } from "@prisma/client";
+// const prisma = new PrismaClient();
 
 interface DepartmentCreateData {name: string; }
 
 export default class DepartmentsController{
 
-
     public async create(req: Request, res: Response): Promise<Response> {
-        const { name } = req.body as DepartmentCreateData;
+        
+        // const { name } = req.body as DepartmentCreateData;
 
-        console.log(req.body);
-        console.log(name);
+        // console.log(req.body);
+        // console.log(name);
     
-        if (!name) {
-            return res.status(400).json({ error: "Nome do departamento é obrigatório" });
-        }
+        // if (!name) { // Se caso o atributo nome estiver vazio
+        //     return res.status(400).json({ error: "Nome do departamento é obrigatório" });
+        // }
     
-        try {
-            const obj = await prisma.department.create({ data: { name } });
-            return res.json(obj);
-            console.log("Departamento criado com sucesso");
+        // try {
+        //     const obj = await prisma.department.create({ data: { name } });
+        //     return res.json(obj);
+
+        //     console.log("Departamento criado com sucesso");
+        //     console.log(obj);
             
-        } catch (error) {
-            console.error("Erro ao criar departamento:", error);
-            return res.status(500).json({ error: "Erro ao criar departamento" });
-        }
+        // } catch (error) {
+        //     console.error("Erro ao criar departamento:", error);
+        //     return res.status(500).json({ error: "Erro ao criar departamento" });
+        // }
+        return res.send()
     }
     
-    
-
     public async list(req: Request, res: Response):Promise<Response>{
+
         const departments = await prisma.department.findMany({});
         return res.json(departments);
     }
@@ -50,10 +53,6 @@ export default class DepartmentsController{
         const name = departments.map((department: {name: string;}) => department.name);
         return res.json(name);
     }
-
-
-
-
 
 }
 
