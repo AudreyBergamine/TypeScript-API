@@ -26,7 +26,7 @@ INSERT INTO department(name) VALUES
     ('Departamento de Logística'
 );
 
--- usar o comando no terminal para visualizar os departamentos: yarn prisma studio
+-- usar o comando no terminal para visualizar Banco de Dados: yarn prisma studio
 -- Video sobre criar o relacionamento: https://www.youtube.com/watch?v=NDWV5hHSPBk
 
 
